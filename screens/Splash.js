@@ -1,4 +1,4 @@
-import { View, StyleSheet, Image, SafeAreaView } from 'react-native'
+import { View, StyleSheet, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Logo from '../assets/AutoLanka.png';
 
