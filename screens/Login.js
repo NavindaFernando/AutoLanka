@@ -1,9 +1,11 @@
 import { View, StyleSheet, Image, Text } from 'react-native'
 import React from 'react'
 import { NativeBaseProvider, Box, Input, Button, Checkbox, StatusBar, ScrollView, VStack, Center } from "native-base";
-import loginBg from '../assets/bmw-z4.jpg';
 import { TextInput } from 'react-native-gesture-handler';
 
+import loginBg from '../assets/bmw-z4.jpg';
+import userIcon from '../assets/userImg.png';
+import passwordIcon from '../assets/passwordImg.png';
 
 export default function Login({ navigation }) {
     return (
@@ -16,8 +18,8 @@ export default function Login({ navigation }) {
                 <ScrollView w='100%' h='100%'>
                     <VStack h='810' w='100%'>
 
-                        <Text style={styles.txtColor}>Login</Text>
-                        <Text style={styles.txt2Color}>Welcome back please login to your account</Text>
+                        <Text style={styles.txtOne}>Login</Text>
+                        <Text style={styles.txtTwo}>Welcome back please login to your account</Text>
 
                         <Center>
                             <Input variant="rounded" placeholder="User name" position={'relative'} color="#FFFFFF" w="85%" top={'50%'} p={'3'} borderRadius={'18'} />
@@ -25,15 +27,19 @@ export default function Login({ navigation }) {
                         </Center>
 
                         <Checkbox value="yellow" colorScheme="yellow" size="md" position={'relative'} top={'57%'} ml={'8%'} bgColor="black">Remember me</Checkbox>
+                        <Text style={styles.txtThree}>Remember me</Text>
 
                         <Center>
-                            <Button position={'relative'} colorScheme="yellow" size="lg" top="60%" w="85%" borderRadius={'18'} onPress={() => console.log("hello world")}>Login</Button>
+                            <Button position={'relative'} colorScheme="yellow" size="lg" top="57%" w="85%" borderRadius={'18'} onPress={() => console.log("hello world")}>Login</Button>
                         </Center>
-                 
-                        <Text style={styles.txt4Color}>Forgot Password?</Text>
-                        <Text style={styles.txt5Color}>Don’t have an account?</Text>
-                        <Text style={styles.txt6Color}>Registrar</Text>
 
+                        <Text style={styles.txtFour}>Forgot Password?</Text>
+                        <Text style={styles.txtFive}>Don’t have an account?</Text>
+                        <Text style={styles.txtSix}>Registrar</Text>
+
+                        <Image style={styles.userIcon} source={userIcon}></Image>
+                        <Image style={styles.passwordIcon} source={passwordIcon}></Image>
+                   
                     </VStack>
                 </ScrollView>
             </Box>
@@ -64,7 +70,23 @@ const styles = StyleSheet.create({
         opacity: 0.35
     },
 
-    txtColor: {
+    userIcon: {
+        position: 'absolute',
+        width: '3%',
+        height: '2%',
+        left: '83%',
+        top:'37%'
+    },
+
+    passwordIcon: {
+        position: 'absolute',
+        width: '3%',
+        height: '2%',
+        left: '83%',
+        top:'46%'
+    },
+
+    txtOne: {
         position: 'relative',
         color: '#FFFFFF',
         fontSize: 34,
@@ -72,7 +94,7 @@ const styles = StyleSheet.create({
         left: '8%'
     },
 
-    txt2Color: {
+    txtTwo: {
         position: 'relative',
         color: '#FFFFFF',
         fontSize: 15,
@@ -81,16 +103,25 @@ const styles = StyleSheet.create({
         opacity: 0.75
     },
 
-    txt4Color: {
+    txtThree: {
         position: 'relative',
         color: '#FFFFFF',
         fontSize: 15,
-        top: '32%',
-        opacity: 0.75,
-        left:'34%'
+        top: '26%',
+        left: '16%',
+        opacity: 0.75
     },
 
-    txt5Color: {
+    txtFour: {
+        position: 'relative',
+        color: '#FFFFFF',
+        fontSize: 15,
+        top: '30%',
+        opacity: 0.75,
+        left: '34%'
+    },
+
+    txtFive: {
         position: 'absolute',
         color: '#FFFFFF',
         fontSize: 15,
@@ -99,7 +130,7 @@ const styles = StyleSheet.create({
         opacity: 0.75
     },
 
-    txt6Color: {
+    txtSix: {
         position: 'absolute',
         color: '#FDCE4B',
         fontSize: 15,
