@@ -1,5 +1,5 @@
 <h3 align="center">
-AutoLanka (PVT) LTD :scroll:
+AutoLanka (PVT) LTD :pencil2:
 </h3>
 
 ![AutoLanka](https://user-images.githubusercontent.com/86073690/200371951-d405af55-5c3f-44ec-aa34-5787835a0860.jpg)
